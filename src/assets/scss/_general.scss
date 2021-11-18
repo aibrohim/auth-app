@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+}
+
+.main {
+  max-width: 1400px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.main__title {
+  font-size: 36px;
+  text-align: center;
+}
