@@ -29,28 +29,14 @@ const Login = () => {
     const password = passwordRef.current.value;
 
     if (mail && password) {
-      fetch("http://165.227.87.89/admin/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: mail,
+      setUser({
+        token: "1235",
+        user: {
+          mail,
           password
-        })
-      })
-      .then(res => {
-        if (res.ok) {
-          return res.json();
         }
-        return Promise.reject(res.json())
-      })
-      .then(data => {
-          setUser(data.data);
-          navigate("/products")
-      })
-      .catch((err) => console.log(err))
-      // history.push("/products");
+      });
+      navigate("/products")
     }
   }
   return (
